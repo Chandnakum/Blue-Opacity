@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blue Opacity Overlay</title>
+    <style>
+        /* Style the container for the image */
+.image-container {
+    position: relative;
+    max-width: 100%;
+}
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the blue opacity overlay */
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.3); /* Adjust the color and opacity (last value) as needed */
+    pointer-events: none; /* Allows clicks to pass through the overlay to the image */
+}
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./_RAM3123.webp" alt="Image Description">
+    </div>
+</body>
+</html>
